@@ -8,7 +8,7 @@ function sendMail() {
                      "mailAddress": emailElement.value,
                      "message": messageElement.value
                  }
-    request.open("POST", "http://localhost:8080/receive");
+    request.open("POST", "https://mail-receiver-service-production.up.railway.app/receive");
     request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     request.onload = () => {
         console.log("Mail sent successfully with status code : " + request.status);
